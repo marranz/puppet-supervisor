@@ -13,6 +13,8 @@ class supervisor (
   $version                  = '3.1.3',
   $include_superlance       = true,
   $enable_http_inet_server  = false,
+  $service_enabled = false,
+  $service_ensure = 'stopped'
 ) {
 
   case $::osfamily {
@@ -77,8 +79,8 @@ class supervisor (
   }
 
   service { 'supervisord':
-    ensure     => running,
-    enable     => true,
+    ensure     => $service_ensure,
+    enable     => $service_enabled,
     hasrestart => true,
     require    => File["${path_config}/supervisord.conf"],
   }
