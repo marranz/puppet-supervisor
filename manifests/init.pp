@@ -9,7 +9,7 @@
 #     enable_http_inet_server => true,
 #   }
 
-class supervisor (
+class supervisor::install (
   $version                  = '3.1.3',
   $include_superlance       = true,
   $enable_http_inet_server  = false,
@@ -19,18 +19,8 @@ class supervisor (
 
   case $::osfamily {
     redhat: {
-      if $::operatingsystem == 'Amazon' {
-        $pkg_setuptools = 'python26-pip'
-        $path_config    = '/etc'
-      }
-      else {
         $pkg_setuptools = 'python-pip'
         $path_config    = '/etc'
-      }
-    }
-    debian: {
-      $pkg_setuptools = 'python-pip'
-      $path_config    = '/etc'
     }
     default: { fail("ERROR: ${::osfamily} based systems are not supported!") }
   }
