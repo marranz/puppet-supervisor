@@ -32,13 +32,6 @@ class supervisor::install (
     provider => 'pip'
   }
 
-  # install start/stop script
-  file { '/etc/init.d/supervisord':
-    source => "puppet:///modules/supervisor/${::osfamily}.supervisord",
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0755',
-  }
 
   file { '/var/log/supervisor':
     ensure  => directory,
