@@ -9,7 +9,7 @@
 #     enable_http_inet_server => true,
 #   }
 
-class supervisor (
+class supervisor::init (
   $version                  = '3.1.3',
   $include_superlance       = true,
   $enable_http_inet_server  = false,
