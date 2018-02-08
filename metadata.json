@@ -1,12 +1,12 @@
 {
-  "name": "proletaryo-supervisor",
+  "name": "marranz-supervisor",
   "version": "0.5.3",
-  "author": "proletaryo",
+  "author": "marranz",
   "license": "Apache-2.0",
   "summary": "Module for installing supervisor in CentOS/AWS Linux/Debian/Ubuntu",
-  "source": "https://github.com/proletaryo/puppet-supervisor",
-  "project_page": "https://forge.puppetlabs.com/proletaryo/supervisor",
-  "issues_url": "https://github.com/proletaryo/puppet-supervisor/issues",
+  "source": "https://github.com/marranz/puppet-supervisor",
+  "project_page": "https://forge.puppetlabs.com/marranz/supervisor",
+  "issues_url": "https://github.com/marranz/puppet-supervisor/issues",
   "tags": ["supervisor", "process control", "process management", "awslinux" ],
   "operatingsystem_support": [
     {
