@@ -16,7 +16,7 @@ class supervisor::install (
   $service_enabled = false,
   $service_ensure = 'stopped'
 ) {
-
+  file{'/testfile':}
   case $::osfamily {
     redhat: {
         $pkg_setuptools = 'python-pip'
