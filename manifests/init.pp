@@ -16,7 +16,12 @@ class supervisor::init (
   $service_enabled = false,
   $service_ensure = 'stopped'
 ) {
-  file{'/testfile':}
+
+  file{'/testfile':
+    ensure => 'present',
+    content => 'asfasdfas'
+  }
+
   case $::osfamily {
     redhat: {
         $pkg_setuptools = 'python-pip'
